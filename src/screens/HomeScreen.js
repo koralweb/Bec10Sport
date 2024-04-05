@@ -55,11 +55,35 @@ const styles = StyleSheet.create({
   bg: {
     flex: 1,
   },
-  logoBox: {},
-  logo: {},
-  menuBlock: {},
-  menuItem: {},
-  menuItemText: {},
+  logoBox: {
+    width: 200,
+    height: 80,
+  },
+  logo: {
+    width: 420 / 3,
+    height: 190 / 3,
+    marginTop: 10,
+    marginLeft: 120,
+    marginBottom: 10,
+  },
+  menuBlock: {
+    marginTop: 50,
+  },
+  menuItem: {
+    backgroundColor: 'white',
+    margin: 15,
+    width: 200,
+    height: 45,
+    marginLeft: 90,
+  },
+  menuItemText: {
+    textAlign: 'center',
+    fontSize: 25,
+    fontWeight: 'bold',
+    marginTop: 10,
+    marginBottom: 5,
+    color: 'black',
+  },
 });
 
 export default HomeScreen;
