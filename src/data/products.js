@@ -14,7 +14,7 @@ const products = [
     type: 'first',
   },
   {
-    name: 'Product name 2',
+    name: 'Привет Аня',
     image: 'require(путь к продукту)',
     desc: 'Product description',
     price: 100,
