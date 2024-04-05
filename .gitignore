@@ -5,6 +5,7 @@ __tests__
 android
 ios
 vendor
+.DS_Store
 .eslintrc.js
 .prettierrc.js
 .watchmanconfig
