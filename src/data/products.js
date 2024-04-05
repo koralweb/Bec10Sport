@@ -1,9 +1,16 @@
 const products = [
   {
-    name: 'Product name',
-    image: 'require(путь к продукту)',
-    desc: 'Product description',
-    price: 100,
+    name: 'Цыпленок табака',
+    image: require('../assets/images/f1.png'),
+    desc: 'со сливочным соусом из лесных грибов',
+    price: 430,
+    type: 'first',
+  },
+  {
+    name: 'Цыпленок табака',
+    image: require('../assets/images/f1.png'),
+    desc: 'со сливочным соусом из лесных грибов',
+    price: 430,
     type: 'first',
   },
   {
