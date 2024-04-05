@@ -16,6 +16,7 @@ Gemfile.lock
 index.js
 jest.config.js
 metro.config.js
+package.json
 package-lock.json
 README.md
 tsconfig.json
