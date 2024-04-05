@@ -8,8 +8,11 @@ import {
   View,
 } from 'react-native';
 import Wrapper from '../components/Wrapper';
+import {useNavigation} from '@react-navigation/native';
 
 const HomeScreen = () => {
+  const navigation = useNavigation();
+
   return (
     <Wrapper>
       <View style={styles.logoBox}>
@@ -25,7 +28,9 @@ const HomeScreen = () => {
           <TouchableOpacity style={styles.menuItem}>
             <Text style={styles.menuItemText}>Главная</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.menuItem}>
+          <TouchableOpacity
+            style={styles.menuItem}
+            onPress={() => navigation.push('Shop')}>
             <Text style={styles.menuItemText}>Меню</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.menuItem}>
