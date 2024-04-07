@@ -8,9 +8,23 @@ import {
   View,
 } from 'react-native';
 import {useNavigation} from '@react-navigation/native';
+import screensList from '../screens/screensList';
 
 const Menu = () => {
   const navigation = useNavigation();
+
+  const renderMenu = () => {
+    return screensList
+      .filter(screen => screen.showInMenu)
+      .map(screen => (
+        <TouchableOpacity
+          key={screen.name}
+          style={styles.menuItem}
+          onPress={() => navigation.push(screen.name)}>
+          <Text style={styles.menuItemText}>{screen.title}</Text>
+        </TouchableOpacity>
+      ));
+  };
 
   return (
     <View style={styles.cont}>
@@ -18,28 +32,7 @@ const Menu = () => {
         style={styles.logo}
         source={require('../assets/images/logo.png')}
       />
-      <View style={styles.menuBlock}>
-        <TouchableOpacity style={styles.menuItem}>
-          <Text style={styles.menuItemText}>Главная</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={styles.menuItem}
-          onPress={() => navigation.push('Shop')}>
-          <Text style={styles.menuItemText}>Меню</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.menuItem}>
-          <Text style={styles.menuItemText}>Резерв стола</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.menuItem}>
-          <Text style={styles.menuItemText}>Трансляции</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.menuItem}>
-          <Text style={styles.menuItemText}>События</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.menuItem}>
-          <Text style={styles.menuItemText}>Контакты</Text>
-        </TouchableOpacity>
-      </View>
+      <View style={styles.menuBlock}>{renderMenu()}</View>
     </View>
   );
 };
